@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Checkout'){
       steps{
-        git branch: 'main', credentialsId: 'anilgithub', url: 'https://github.com/anilpandacoc/my-bash-scripts.git'
+        checkout scm
       }
     }
     stage('Build'){
