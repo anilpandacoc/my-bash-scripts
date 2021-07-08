@@ -6,4 +6,4 @@ do
    echo " The number is: ${c} "
 done
 
-echo " Done.."
+echo " Done...."
