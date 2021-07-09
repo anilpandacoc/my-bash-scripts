@@ -1,0 +1,17 @@
+//Scripted
+node('agent2'){
+    stage('Checkout'){
+        git branch: 'main', credentialsId: 'anilgithub', url: 'https://github.com/anilpandacoc/my-bash-scripts.git'
+    }
+    stage('Build)'{
+        sh "sh my-bash-scripts.sh"
+    }
+    stage('Post task'){
+        sh "echo emailing"
+    }
+    stage(' printing enviornment variable'){
+        withEnv(['myVar="Outer Block"']){
+            echo "My varable is : $myVar" 
+        }
+    }
+}
