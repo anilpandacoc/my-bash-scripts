@@ -3,7 +3,7 @@ node('agent2'){
     stage('Checkout'){
         git branch: 'main', credentialsId: 'anilgithub', url: 'https://github.com/anilpandacoc/my-bash-scripts.git'
     }
-    stage('Build)'{
+    stage('Build'){
         sh "sh my-bash-scripts.sh"
     }
     stage('Post task'){
