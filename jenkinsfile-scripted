@@ -11,7 +11,7 @@ node('agent2'){
     }
     stage(' printing enviornment variable'){
         withEnv(['myVar="Outer Block"']){
-            echo "My varable is : $myVar" 
+            echo "My varable is :: $myVar" 
         }
     }
 }
